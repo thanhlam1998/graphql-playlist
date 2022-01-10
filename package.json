@@ -9,6 +9,6 @@
     "install": "npx lerna bootstrap",
     "dev:fe": "lerna run dev --scope=client",
     "dev:be": "lerna run dev --scope=server",
-    "dev": "lerna run dev"
+    "dev": "lerna run dev --stream"
   }
 }
