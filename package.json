@@ -1,0 +1,14 @@
+{
+  "name": "root",
+  "private": true,
+  "version": "1.0.0",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "install": "npx lerna bootstrap",
+    "dev:fe": "lerna run dev --scope=client",
+    "dev:be": "lerna run dev --scope=server",
+    "dev": "lerna run dev"
+  }
+}
