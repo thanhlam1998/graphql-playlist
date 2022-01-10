@@ -4,6 +4,7 @@ const { graphqlHTTP } = require("express-graphql");
 const mongoose = require("mongoose");
 const schema = require("./schema/schema");
 const cors = require("cors");
+require('dotenv').config();
 
 const app = express();
 const port = 4000;
@@ -13,7 +14,7 @@ app.use(cors());
 
 // Connect to mongoose db
 mongoose.connect(
-  "mongodb+srv://thanhlam:thanhlam@cluster0.ddxsn.mongodb.net/GraphList?retryWrites=true&w=majority",
+  `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.ddxsn.mongodb.net/GraphList?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
